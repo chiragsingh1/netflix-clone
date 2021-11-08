@@ -1,7 +1,27 @@
-import React from "react";
+import axios from "../axios";
+import requests from "../Requests";
+import React, { useEffect, useState } from "react";
 import "./Banner.css";
 
 function Banner() {
+  // state for movies
+  const [movie, setMovie] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get(requests.fetchNetflixOriginals);
+      setMovie(
+        response.data.results[
+          Math.floor(Math.random() * response.data.results.length - 1)
+        ]
+      );
+      return response;
+    }
+
+    fetchData();
+  }, []);
+
+  console.log(movie);
   function truncate(string, n) {
     return string.length > n ? string.substr(0, n - 1) + "..." : string;
   }
@@ -11,26 +31,20 @@ function Banner() {
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url("https://images3.alphacoders.com/882/thumb-1920-882548.jpg")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
         backgroundPosition: "center center",
       }}
     >
       <div className="banner__contents">
-        <h1 className="banner__title">Stranger Things</h1>
+        <h1 className="banner__title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
         <div className="banner__buttons">
           <button className="banner__button">Play</button>
           <button className="banner__button">My List</button>
         </div>
         <h1 className="banner__description">
-          {truncate(
-            `Stranger Things description will go here!Stranger Things description
-          will go here!Stranger Things description will go here!Stranger Things
-          description will go here!Stranger Things description will go
-          here!Stranger Things description will go here!Stranger Things
-          description will go here!Stranger Things description will go
-          here!Stranger Things description will go here!`,
-            150
-          )}
+          {truncate(movie?.overview, 150)}
         </h1>
       </div>
       <div className="banner--fadeBottom" />
