@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import "./ProfileScreen.css";
 import { signOut } from "@firebase/auth";
 import { auth } from "../firebase";
+import Plans from "../components/Plans";
 
 function ProfileScreen() {
   // selecting user from redux store
@@ -24,6 +25,7 @@ function ProfileScreen() {
             <h2>{user.email}</h2>
             <div className="profileScreen__plans">
               <h3>Plans</h3>
+              <Plans />
               <button
                 onClick={() => signOut(auth)}
                 className="profileScreen__signOut"

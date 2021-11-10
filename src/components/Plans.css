@@ -1,0 +1,30 @@
+.plans > h5 {
+  margin: 20px;
+  opacity: 0.8;
+}
+.plans__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.plans__info:hover {
+  opacity: 1;
+}
+.plans__button {
+  padding: 5px 15px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+.plans__button:disabled {
+  background-color: blanchedalmond;
+  color: black;
+  cursor: not-allowed;
+}
