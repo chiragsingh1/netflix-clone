@@ -4,7 +4,7 @@
   margin-bottom: 10px;
 }
 .row h2 {
-  font-weight: 500;
+  font-weight: 600;
 }
 .row__posters {
   display: flex;
@@ -38,9 +38,9 @@
 }
 
 /* Media Queries */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
   .row__posterLarge {
-    max-height: 130px;
+    max-height: 100px;
   }
   .row h2 {
     font-size: 0.9rem;
@@ -48,7 +48,7 @@
 }
 @media screen and (max-width: 260px) {
   .row__posterLarge {
-    max-height: 110px;
+    max-height: 80px;
   }
   .row h2 {
     font-size: 0.8rem;
