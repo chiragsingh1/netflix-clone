@@ -35,3 +35,21 @@
   transform: scale(1.02);
   opacity: 0.95;
 }
+
+/* Media Queries */
+@media screen and (max-width: 400px) {
+  .row__posterLarge {
+    max-height: 170px;
+  }
+  .row h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 260px) {
+  .row__posterLarge {
+    max-height: 140px;
+  }
+  .row h2 {
+    font-size: 1rem;
+  }
+}

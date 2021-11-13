@@ -32,13 +32,18 @@
   border-radius: 5px;
   right: 60px;
   /* margin-right: 40px; */
-  top: 25px;
+  top: 30px;
   padding: 8px 20px;
   font-size: 1rem;
   color: white;
   background-color: #e50914;
   border: none;
   cursor: pointer;
+}
+.loginScreen__button:disabled {
+  background-color: black;
+  color: gray;
+  cursor: not-allowed;
 }
 .loginScreen__body {
   position: absolute;
@@ -86,8 +91,84 @@
   font-weight: 600;
 }
 
-/* @media screen and (max-width: 900px) {
-  .loginScreen__body {
-    left: 0;
+/* Media Queries */
+@media screen and (max-width: 550px) {
+  .loginScreen__logo {
+    left: 10px;
+    margin-left: 20px;
+    margin-right: 50px;
   }
-} */
+  .loginScreen__button {
+    right: 30px;
+  }
+  .loginScreen__body > h1 {
+    font-size: 2rem;
+  }
+  .loginScreen__body > h2 {
+    font-size: 1.3rem;
+  }
+  .loginScreen__body > h3 {
+    font-size: 1rem;
+  }
+  .loginScreen__input > form > input {
+    width: 50%;
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .loginScreen__logo {
+    left: 0px;
+    width: 140px;
+  }
+  .loginScreen__button {
+    right: 20px;
+    top: 22px;
+    margin-left: 10px;
+  }
+  .loginScreen__body > h1 {
+    font-size: 1.6rem;
+  }
+  .loginScreen__body > h2 {
+    font-size: 1rem;
+  }
+  .loginScreen__body > h3 {
+    font-size: 0.7rem;
+  }
+  .loginScreen__input > form > input {
+    height: 25px;
+    width: 50%;
+  }
+  .loginScreen__getStarted {
+    padding: 12px 8px;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 310px) {
+  .loginScreen__input > form > input {
+    height: 22px;
+    width: 50%;
+  }
+  .loginScreen__getStarted {
+    padding: 10px 3px;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 285px) {
+  .loginScreen__logo {
+    left: -10px;
+    width: 120px;
+  }
+  .loginScreen__button {
+    right: 10px;
+    top: 20px;
+    font-size: 0.7rem;
+  }
+  .loginScreen__input > form > input {
+    height: 22px;
+    width: 40%;
+  }
+  .loginScreen__getStarted {
+    padding: 10px 3px;
+    font-size: 1rem;
+  }
+}

@@ -20,7 +20,7 @@
   position: fixed;
   left: 0;
   top: 5px;
-  width: 100px;
+  width: 125px;
   object-fit: contain;
   cursor: pointer;
   padding-left: 20px;
@@ -28,6 +28,17 @@
 .nav__avatar {
   position: fixed;
   cursor: pointer;
+  padding-top: 3px;
   right: 20px;
   width: 40px;
+}
+@media screen and (max-width: 400px) {
+  .nav__logo {
+    padding-left: 10px;
+    width: 100px;
+  }
+  .nav__avatar {
+    right: 10px;
+    padding-right: 10px;
+  }
 }

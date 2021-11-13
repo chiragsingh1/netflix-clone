@@ -1,12 +1,15 @@
 .plans > h5 {
-  margin: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
   opacity: 0.8;
 }
-.plans__info {
+.plans {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: flex-start; */
+}
+.plans__info {
   padding: 20px;
   opacity: 0.8;
   cursor: pointer;
@@ -15,6 +18,7 @@
   opacity: 1;
 }
 .plans__button {
+  margin-top: 10px;
   padding: 5px 15px;
   font-size: 1rem;
   color: white;
@@ -24,7 +28,20 @@
   border: none;
 }
 .plans__button:disabled {
-  background-color: blanchedalmond;
+  background-color: rgb(150, 146, 140);
   color: black;
   cursor: not-allowed;
+}
+
+/* Media Queries */
+@media screen and (max-width: 450px) {
+  .plans__button {
+    padding: 3px 12px;
+    font-size: 0.9rem;
+  }
+  .plans__button:disabled {
+    background-color: blanchedalmond;
+    color: black;
+    cursor: not-allowed;
+  }
 }

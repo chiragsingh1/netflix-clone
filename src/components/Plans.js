@@ -36,7 +36,7 @@ function Plans() {
       <h5>Renewable date: 04/09/2023</h5>
       {Object.entries(netflixPlans).map(([planId, planData]) => {
         return (
-          <div className="plans__plan">
+          <div key={planId} className="plans__plan">
             <div className="plans__info">
               <h5>{planData.name}</h5>
               <h6>

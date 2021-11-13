@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   max-width: 300px;
-  padding: 70px;
+  padding: 60px;
   margin-left: auto;
   margin-right: auto;
   background: rgba(0, 0, 0, 0.85);
@@ -47,4 +47,25 @@
 .signinScreen__link:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 500px) {
+  .signinScreen {
+    padding: 40px;
+  }
+  .signinScreen > form > h1 {
+    font-size: 1.7rem;
+  }
+  .signinScreen > form > h4 {
+    font-size: smaller;
+  }
+}
+@media screen and (max-width: 400px) {
+  .signinScreen {
+    padding: 30px;
+  }
+  .signinScreen > form > h1 {
+    font-size: 1.5rem;
+  }
 }
