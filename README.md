@@ -4,7 +4,7 @@
 
 &nbsp;
 
-#### Explore the app here - https://netflix-clone-3d0f4.web.app/
+#### Explore the app here - https://chiragsingh-flixclone.netlify.app/
 
 #### Tech
 
