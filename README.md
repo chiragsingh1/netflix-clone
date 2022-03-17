@@ -13,7 +13,7 @@ This netflix clone uses following technologies:
 - [React.JS] - for building UI components
 - [React-Router-DOM] - npm module for routing in React.js
 - [Firebase] - for email authentication and deployment
-- [Redux] - for storing logged in user in the global store
+- [Redux Toolkit] - for storing logged in user in the global store
 - [CSS] - for styling the UI components
 
 ## How to clone this repo and run on localhost
