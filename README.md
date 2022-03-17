@@ -1,8 +1,5 @@
 # Netflix Clone 🚀
-
 ##### Netflix Clone is a clone-based project built using React.js and Firebase
-
-&nbsp;
 
 #### Explore the app here - https://chiragsingh-flixclone.netlify.app/
 
